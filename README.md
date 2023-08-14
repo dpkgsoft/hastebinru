@@ -1,6 +1,5 @@
 # Hastebin.ru
 
----
 ## Online demo
 
 Will be available soon (or available now maybe :)) on [hastebin.ru](https://hastebin.ru)
@@ -73,8 +72,6 @@ Document not found:
 ```
 
 ## Config
-
----
 
 ### listen
 IP we listen to. Default: `0.0.0.0`
