@@ -1,6 +1,7 @@
 logs/
 config.json
-
+data/
+static/
 
 target/
 !.mvn/wrapper/maven-wrapper.jar

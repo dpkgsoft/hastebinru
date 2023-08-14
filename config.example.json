@@ -4,7 +4,6 @@
   "dir": "./data",
   "keyLength": 10,
   "maxLength": 400000,
-  "sentryDSN": "",
   "docs": {
     "readme": "./README.md"
   }

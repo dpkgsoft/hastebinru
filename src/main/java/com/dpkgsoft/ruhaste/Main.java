@@ -1,14 +1,12 @@
 package com.dpkgsoft.ruhaste;
 
 import com.google.gson.Gson;
-import io.sentry.Sentry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Objects;
 
 public class Main {
     private static final Logger LOG = LogManager.getLogger(Main.class);
@@ -30,15 +28,7 @@ public class Main {
         } catch (Exception ignored) {}
         LOG.info("Working on version " + VERSION);
 
-        if (!Objects.equals(config.getSentryDSN(), "")) {
-            LOG.info("Initializing Sentry...");
-            Sentry.init(options -> {
-                options.setDsn(config.getSentryDSN());
-            });
-        } else {
-            LOG.warn("Sentry DSN not specified. Working without Sentry. Warning!!! Might be Runtime Exceptions!");
-        }
-
-
+        LOG.info("Starting webservice");
+        WebService.start();
     }
 }
